@@ -23,7 +23,7 @@ for index, row in data.iterrows():
         data.loc[index, 'Checked'] = 'Done'
         url = driver.current_url
         data.loc[index, 'Website'] = url
-        data.to_excel('scraped_city_emails.xlsx', encoding='utf-8', index=False)
+        data.to_excel('scraped_city_emails.xlsx', index=False)
         x -= 1
         print(url)
         driver.quit()
